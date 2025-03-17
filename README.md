@@ -10,6 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser. m
 The page will reload if you make edits. But it's best to referesh the page anyway<br>
 
 ## Getting Sound
+
 Once the drum machine is live, press 'start audio' and enter some steps.
 
 currently plays at 120bpm and has 6 tracks which play a sine synth at different pitches.
@@ -17,6 +18,7 @@ currently plays at 120bpm and has 6 tracks which play a sine synth at different 
 The codebase is a state but will fix it up in the weekends.
 
 ## Structure
+
 `App.jsx` is the main file -> this defines the overall structure of the drum machine
 I have a state provider in the `App.jsx` which serves various global properties of the sequence other components need to know.
 

@@ -10,19 +10,13 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-weight: bold;
-
-  
-
 }
-
 
 .drum_machine_container {
   box-sizing: border-box;
   border: var(--border-thickness) solid rgb(255, 255, 255);
   height: 800px;
-  width: 875px; 
-  
-  
+  width: 875px;
 }
 .transport_bar {
   /* box-sizing: border-box;
@@ -36,18 +30,17 @@
   border-top: var(--border-thickness) solid rgb(255, 255, 255);
   border-bottom: var(--border-thickness) solid rgb(255, 255, 255);
   /* border-color: rgb(255, 255, 255);  */
-  
+
   height: 70%;
-} 
+}
 
 .sequencer {
   background-color: var(--mid-tone);
   display: flex;
   justify-content: center;
   /* align-content: center; */
-  
+
   height: 100%;
-  
 }
 .step {
   width: 75%;
