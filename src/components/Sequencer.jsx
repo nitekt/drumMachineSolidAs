@@ -36,8 +36,11 @@ export default function Sequencer(props) {
 
     if (playing) {
       runSeq = () => {
-        let on = steps.item(i).getAttribute('isOn') == 'true' ? true : false
+        // Playhead styling
+        steps.forEach((step) => (step.style.border = ''))
+        steps.item(i).style.border = '5px solid blue'
 
+        let on = steps.item(i).getAttribute('isOn') == 'true' ? true : false
         if (on == true) {
           window.patch.sendEventOrValue('id_', props.id - 1)
           window.patch.sendEventOrValue('pressed', on)
