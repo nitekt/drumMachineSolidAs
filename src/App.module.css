@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: bold;
+
+  
+
+}
+
+
+.drum_machine_container {
+  box-sizing: border-box;
+  border: var(--border-thickness) solid rgb(255, 255, 255);
+  height: 800px;
+  width: 875px; 
+  
+  
+}
+.transport_bar {
+  /* box-sizing: border-box;
+  border: 2px solid #18f047; */
+  height: 5%;
+}
+.sequencer_container {
+  /* box-sizing: border-box;
+  border: 5px solid #7c8bff; */
+  /* box-sizing: border-box; */
+  border-top: var(--border-thickness) solid rgb(255, 255, 255);
+  border-bottom: var(--border-thickness) solid rgb(255, 255, 255);
+  /* border-color: rgb(255, 255, 255);  */
+  
+  height: 70%;
+} 
+
+.sequencer {
+  background-color: var(--mid-tone);
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  
+  height: 100%;
+  
+}
+.step {
+  width: 75%;
+  height: 50%;
+  background-color: rgb(27, 27, 28);
+  border: none;
+  transition: background-color 0.08s ease-in-out;
+  border-radius: 10%;
+}
+
+.device_container {
+  /* box-sizing: border-box;
+  border: 2px solid #f91919; */
+  height: calc(25% + 1px);
+}
+
+.track {
+  /* box-sizing: border-box;
+  border: 2px dashed #006103; */
+  height: calc(100% / 7);
+  box-sizing: border-box;
+  border-bottom: var(--border-thickness) solid white;
+  display: flex;
+}
+/* 12.5% for track sizes */
+.header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.link {
+  color: #b318f0;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

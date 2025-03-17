@@ -1,0 +1,13 @@
+
+{
+    "CmajorVersion":    1,
+    "ID":               "com.nitekttttt.your_patch_ID",
+    "version":          "1.0",
+    "name":             "SDM_engine",
+    "description":      "SDM_engine",
+    "category":         "generator",
+    "manufacturer":     "nitekt",
+    "isInstrument":     true,
+
+    "source":           "SDM_engine.cmajor"
+}

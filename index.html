@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <script type="module">
+
+      import * as cmajor from "./solidjs_sound/cmaj_SDM_engine.js";
+      window.context = new AudioContext();
+      async function setup() {
+
+        const patch = await cmajor.createAudioWorkletNodePatchConnection(window.context, "connection");
+        window.patch = patch;
+        await patch.connectDefaultAudioAndMIDI(window.context);
+        const parent = document.getElementById("root");
+        window.toilet = "hi there";
+        console.log(window.toilet);
+        console.log(patch);
+        for(const slider of parent.querySelectorAll(".track")) {
+          
+
+          slider.oninput = () => {
+            //let logValue = Math.pow(10, slider.value /20.0);
+            patch.sendEventOrValue("id_", parseInt(slider.id)-1); //maybe move this to the 'hover' part if possible
+            patch.sendEventOrValue("volume", slider.value); //on state
+            //const normalized = (slider.value - )
+            
+          }
+        }
+        // for(const button of parent.querySelectorAll(".track")) {
+        //   button.onclick = () => {
+            
+        //     patch.sendEventOrValue("id_", parseInt(button.id)-1); //on state
+        //     patch.sendEventOrValue("pressed", true); //on state
+        //     console.log(parseInt(button.id)-1);
+        //   }
+          
+        // }
+      }
+      setup();
+    </script>
+    <title>Solid App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/src/index.jsx" type="module"></script>
+  </body>
+</html>
