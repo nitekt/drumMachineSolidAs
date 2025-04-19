@@ -2,7 +2,8 @@ import { createContext, For, useContext } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import styles from './App.module.css'
 import Track from './components/Track'
-
+import Master from './components/Master'
+import Device from './components/Device'
 const stateContext = createContext()
 //make play state accessible to transport, tracks and devices
 export function StateProvider(props) {
@@ -58,9 +59,10 @@ function App() {
               )}
             </For>
 
-            <div>master track</div>
+            <Master></Master>
           </div>
-          <div class={styles.device_container}>device panel</div>
+          <Device></Device>
+          {/* <div class={styles.device_container}>device panel</div> */}
         </div>
       </div>
     </StateProvider>

@@ -54,8 +54,38 @@
 .device_container {
   /* box-sizing: border-box;
   border: 2px solid #f91919; */
-  height: calc(25% + 1px);
+  height: calc(24%);
+  display: flex;
+  position: relative
 }
+
+.panel_container {
+  height: 100%;
+  
+  box-sizing: border-box;
+  
+  position:relative;
+  
+  padding:15px;
+  
+}
+
+.panel {
+  background-color: var(--mid-tone);
+  height: 100%;
+  width: 100%;
+  border-radius: 7.5px;
+  display: flex;
+  flex-direction:row;
+  
+  position: relative;
+}
+
+.sound_editor {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .track {
   /* box-sizing: border-box;
